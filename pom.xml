@@ -197,7 +197,7 @@
             
             
             
-            <!-- 
+  
             <plugin>
                 <groupId>com.google.code.maven-replacer-plugin</groupId>
                 <artifactId>replacer</artifactId>
@@ -220,7 +220,7 @@
                 </configuration>
             </plugin>
             
-            -->
+
             
             
             <plugin><!-- Using jdk 1.5.0_22, package-info.java files are compiled correctly. -->
@@ -269,14 +269,15 @@
             </plugin>
            
            
-           <!-- <plugin>
-                
+           <plugin>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>${surefireVersion}</version>
                 <configuration>
                     <test>org/junit/tests/AllTests.java</test>
                     <useSystemClassLoader>true</useSystemClassLoader>
                     <enableAssertions>false</enableAssertions>
+                    <testFailureIgnore>true</testFailureIgnore>
+                    
                 </configuration>
                 <dependencies>
                     <dependency>
@@ -290,7 +291,6 @@
             
             
             
-            -->
             <plugin>
                 <!--
                 This plugin can package the main artifact's sources (src/main/java)
